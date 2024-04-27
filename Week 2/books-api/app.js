@@ -43,7 +43,7 @@ app.get('/books/:id', (req, res) => {
 });
 
 app.put('/books/:id', (req, res) =>{
-    const booksId = parseInt(req.params.id); // Get book ID from URL parameter
+    const bookId = parseInt(req.params.id); // Get book ID from URL parameter
     const updatedBook = req.body; // Get updated book data from request body
 
     const bookIndex = books.findIndex(book => book.id === bookId);
