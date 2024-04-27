@@ -69,3 +69,8 @@ app.delete('/books/:id', (req, res) => {
         res.status(404).send('Book not found'); // Send error for non-existent book
     }
 });
+
+// Part 4 Starting the Server
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+})
