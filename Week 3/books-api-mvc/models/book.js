@@ -16,7 +16,7 @@ class Book {
         return books;
     }
 
-    static async getBooksById(id) {
+    static async getBookById(id) {
         const books = await this.getAllBooks(); // Await the promise to get books
         const book = books.find((book) => book.id === id);
         return book;
@@ -36,7 +36,7 @@ class Book {
     static async updateBook(id, newBookData) {
         const books = await this.getAllBooks();
         const existingBookIndex = books.findIndex((book) => book.id === id);
-        if (exisitingBookIndex === -1) {
+        if (existingBookIndex === -1) {
             return null;
         }
         const updatedBook = {
