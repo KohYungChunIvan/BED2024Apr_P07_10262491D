@@ -22,7 +22,7 @@ const getBookById = async (req, res) => {
         console.error(error);
         res.status(500).send("Error retrieving book");
     }
-}
+};
 
 const createBook = async (req, res) => {
     const newBook = req.body;
